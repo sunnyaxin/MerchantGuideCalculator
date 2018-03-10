@@ -1,3 +1,4 @@
+import model.Roman;
 import model.Unit;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +20,7 @@ public class ExtractExpressionTest {
         Unit glob = extractor.extract(expression);
 
         assertEquals(glob.getName(), "glob");
-        assertEquals(glob.getNumber(), "I");
+        assertEquals(glob.getRomanNumber(), Roman.I);
     }
 
     @Test
@@ -28,6 +29,6 @@ public class ExtractExpressionTest {
         Unit glob = extractor.extract(expression);
 
         assertEquals(glob.getName(), "prok");
-        assertEquals(glob.getNumber(), "V");
+        assertEquals(glob.getRomanNumber(), Roman.V);
     }
 }

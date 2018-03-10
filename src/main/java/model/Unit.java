@@ -2,18 +2,18 @@ package model;
 
 public class Unit {
     private String name;
-    private String number;
+    private Roman romanNumber;
 
-    public Unit(String name, String number) {
+    public Unit(String name, Roman romanNumber) {
         this.name = name;
-        this.number = number;
+        this.romanNumber = romanNumber;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getNumber() {
-        return number;
+    public Roman getRomanNumber() {
+        return romanNumber;
     }
 }
