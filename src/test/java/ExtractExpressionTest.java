@@ -6,19 +6,28 @@ import static org.junit.Assert.assertEquals;
 
 public class ExtractExpressionTest {
 
-    private ExtractExpression extractExpression;
+    private ExtractExpression extractor;
 
     @Before
     public void setUp() throws Exception {
-        extractExpression = new ExtractExpression();
+        extractor = new ExtractExpression();
     }
 
     @Test
     public void should_extract_expression_glob_is_I() throws Exception {
         String expression = "glob is I";
-        Unit glob = extractExpression.extract(expression);
+        Unit glob = extractor.extract(expression);
 
         assertEquals(glob.getName(), "glob");
         assertEquals(glob.getNumber(), "I");
+    }
+
+    @Test
+    public void should_extract_expression_prok_is_V() throws Exception {
+        String expression = "prok is V";
+        Unit glob = extractor.extract(expression);
+
+        assertEquals(glob.getName(), "prok");
+        assertEquals(glob.getNumber(), "V");
     }
 }
